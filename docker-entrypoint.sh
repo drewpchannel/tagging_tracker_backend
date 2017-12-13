@@ -10,7 +10,7 @@ echo 'Starting nginx'
 echo 'Starting Gunicorn.'
 exec gunicorn tagging_tracker.wsgi:application \
     --name tagging_tracker \
-#    --bind unix:tagging_tracker.sock \
+    --bind unix:tagging_tracker.sock \
     --workers 3 \
     --log-level=info \
     --log-file=/code/logs/gunicorn.log \
