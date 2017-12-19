@@ -54,7 +54,7 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # start certbot stuff
 # READ: https://certbot.eff.org/#ubuntuxenial-nginx
-RUN certbot --nginx -n
+RUN certbot --nginx --agree-tos --email a.mcruer@live.com
 
 
 # Automating renewal
