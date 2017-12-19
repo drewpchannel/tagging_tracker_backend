@@ -52,7 +52,9 @@ RUN ln -s /etc/nginx/sites-available/django_nginx.conf /etc/nginx/sites-enabled
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-
+# start certbot stuff
+# READ: https://certbot.eff.org/#ubuntuxenial-nginx
+RUN certbot --nginx -n
 
 
 # Automating renewal

@@ -15,9 +15,6 @@ exec gunicorn tagging_tracker.wsgi:application \
     --workers 3 \
     --log-level=info \
     --log-file=/code/logs/gunicorn.log \
-    --access-logfile=/code/logs/access.log & 
+    --access-logfile=/code/logs/access.log &
 exec service nginx start
 
-# start certbot stuff
-# READ: https://certbot.eff.org/#ubuntuxenial-nginx
-exec certbot --nginx \ c
