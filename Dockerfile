@@ -17,10 +17,10 @@ RUN apt-get install -y postgresql-9.6-postgis-2.3 postgresql-contrib-9.6 postgis
 
 # for certbot
 RUN apt-get update
-RUN apt-get install software-properties-common
+RUN apt-get install software-properties-common -y
 RUN add-apt-repository ppa:certbot/certbot
 RUN apt-get update
-RUN apt-get install python-certbot-nginx
+RUN apt-get install python-certbot-nginx -y
 
 # now get pip
 RUN pip3 install --upgrade pip
